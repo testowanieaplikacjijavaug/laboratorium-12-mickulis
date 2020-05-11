@@ -18,11 +18,7 @@ public class GooglePageObjectTests
 	WebDriver driver;
 	SearchPageObject page;
 
-	@BeforeAll
-	public static void oneTimeSetup()
-	{
-		WebDriverManager.chromedriver().setup();
-	}
+
 
 	@BeforeEach
 	public void setup()

@@ -19,11 +19,7 @@ public class GooglePageFactoryTest
 	WebDriver driver;
 	SearchPageFactory page;
 
-	@BeforeAll
-	public static void oneTimeSetup()
-	{
-		WebDriverManager.chromedriver().setup();
-	}
+
 
 	@BeforeEach
 	public void setup()
