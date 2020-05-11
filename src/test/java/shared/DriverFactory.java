@@ -13,11 +13,12 @@ public class DriverFactory
 	{
 		String os = System.getProperty("os.name");
 		if (os.contains("Windows"))
+		{
 			System.setProperty("webdriver.gecko.driver", "resources/geckodriver.exe");
+		}
 		else
 		{
 			System.setProperty("webdriver.gecko.driver", "resources/geckodriver");
-			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"/dev/null");
 		}
 		FirefoxProfile ffprofile = new FirefoxProfile();
 		ffprofile.setPreference("intl.accept_languages","en-uk");
