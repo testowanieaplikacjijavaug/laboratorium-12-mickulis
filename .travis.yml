@@ -1,4 +1,7 @@
 language: java
 
+install:
+    - chmod +x resources/geckodriver
+
 script:
     - mvn test
