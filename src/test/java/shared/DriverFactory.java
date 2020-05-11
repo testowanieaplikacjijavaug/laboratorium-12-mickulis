@@ -28,7 +28,7 @@ public class DriverFactory
 		options.setProfile(ffprofile);
 		options.addArguments("log-level=3");
 		FirefoxDriver driver = new FirefoxDriver(options);
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
 		return driver;
 	}
