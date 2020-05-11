@@ -1,33 +1,33 @@
 package z1;
 
 import io.github.bonigarcia.seljup.SeleniumExtension;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import shared.DriverFactory;
 
 import java.util.concurrent.TimeUnit;
 
-@ExtendWith(SeleniumExtension.class)
+
 public class DuckDuckGoPageObjectTests
 {
 	WebDriver driver;
 	DuckDuckGoPageObject page;
 
-	public DuckDuckGoPageObjectTests(ChromeDriver driver)
+	@BeforeAll
+	public static void oneTimeSetup()
 	{
-		this.driver = driver;
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WebDriverManager.chromedriver().setup();
 	}
 
 	@BeforeEach
 	public void setup()
 	{
+		driver = DriverFactory.get();
 		page = new DuckDuckGoPageObject(driver);
 		driver.navigate().to("https://duckduckgo.com");
 	}
