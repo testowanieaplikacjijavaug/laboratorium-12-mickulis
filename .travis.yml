@@ -4,4 +4,4 @@ install:
     - chmod +x resources/geckodriver
 
 script:
-    - mvn test
+    - mvn test -B
