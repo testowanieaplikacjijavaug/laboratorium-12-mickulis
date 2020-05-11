@@ -1,3 +1,1 @@
-One badge for all excercises -> failing doesn't mean the specific excercise is wrong
-
-[![Build Status](https://travis-ci.com/testowanieaplikacjijavaug/laboratorium-10-mickulis.svg?branch=master)](https://travis-ci.com/testowanieaplikacjijavaug/laboratorium-10-mickulis)
+[![Build Status](https://travis-ci.com/testowanieaplikacjijavaug/laboratorium-12-mickulis.svg?branch=master)](https://travis-ci.com/testowanieaplikacjijavaug/laboratorium-12-mickulis)
